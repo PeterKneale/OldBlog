@@ -1,0 +1,26 @@
+﻿@model CarCreateModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (@Html.BeginForm())
+{
+   
+    @Html.ValidationSummary(true)
+    <br />
+    
+    @Html.LabelFor(m => m.Make)
+    @Html.TextBoxFor(m => m.Make)
+    @Html.ValidationMessageFor(m => m.Make)
+    <br />
+    
+    @Html.LabelFor(m => m.Year)
+    @Html.TextBoxFor(m => m.Year)
+    @Html.ValidationMessageFor(m => m.Year)
+    <br />
+    
+    <input type="submit" value="Save" />
+}

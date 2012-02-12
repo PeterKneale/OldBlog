@@ -1,0 +1,11 @@
+﻿.Error {
+    color: Red;
+}
+.Warning
+{
+    color:Orange;
+}
+.Success
+{
+    color:Green;
+}

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<NotificationBar.Models.CarViewModel>
+
+<h2>Cars</h2>
+
+@Html.ActionLink("Add a car", "Create")
+
+<ul>
+@foreach (var car in Model)
+{
+    <li>
+        @Html.ActionLink(car.Description, "Details", new { id=car.Id })
+        &nbsp;
+        @Html.ActionLink("delete", "Delete", new { id = car.Id })
+        &nbsp;
+        @Html.ActionLink("edit", "Edit", new { id = car.Id })
+    </li>
+}
+</ul>

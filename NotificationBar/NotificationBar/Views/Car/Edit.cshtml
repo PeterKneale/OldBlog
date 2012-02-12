@@ -1,0 +1,24 @@
+﻿@model NotificationBar.Models.CarEditModel
+
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.Id)
+    <br />
+    
+    @Html.LabelFor(m => m.Make)
+    @Html.TextBoxFor(m => m.Make)
+    @Html.ValidationMessageFor(m => m.Make)
+    <br />
+    
+    @Html.LabelFor(m => m.Year)
+    @Html.TextBoxFor(m => m.Year)
+    @Html.ValidationMessageFor(m => m.Year)
+    <br />
+    
+    <input type="submit" value="Save" />
+        
+}

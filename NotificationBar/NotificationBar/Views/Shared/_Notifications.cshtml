@@ -1,0 +1,4 @@
+﻿@foreach (var notification in Html.Notifications().Current)
+{
+    <div class="@notification.Status">@notification.Message</div>
+}
