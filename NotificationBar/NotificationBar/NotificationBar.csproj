@@ -68,6 +68,10 @@
   <ItemGroup>
     <Compile Include="Code\Car.cs" />
     <Compile Include="Code\Notification.cs" />
+    <Compile Include="Code\NotificationExtensions.cs" />
+    <Compile Include="Code\Notifications.cs" />
+    <Compile Include="Code\Status.cs" />
+    <Compile Include="Code\WithNotificationResult.cs" />
     <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Code\Database.cs" />
     <Compile Include="Global.asax.cs">
@@ -108,8 +112,6 @@
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />

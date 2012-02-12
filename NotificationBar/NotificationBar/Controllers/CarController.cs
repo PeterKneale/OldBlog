@@ -46,16 +46,16 @@ namespace NotificationBar.Controllers
             return View(model);
         }
 
-        [HttpPost]
-        public ActionResult Edit(CarEditModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                Database.Update(model.Id, model.Make, model.Year);
-                return RedirectToAction("Index").WithNotification(Status.Success, "Successfully Updated");
-            }
-            return View(model);
-        }
+[HttpPost]
+public ActionResult Edit(CarEditModel model)
+{
+    if (ModelState.IsValid)
+    {
+        Database.Update(model.Id, model.Make, model.Year);
+        return RedirectToAction("Index").WithNotification(Status.Success, "Successfully Updated");
+    }
+    return View(model);
+}
 
         public ActionResult Delete(int id)
         {
