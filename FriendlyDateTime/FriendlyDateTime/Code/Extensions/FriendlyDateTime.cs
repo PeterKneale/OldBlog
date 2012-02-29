@@ -14,59 +14,66 @@ namespace FriendlyDateTime.Code.Extensions
             var future = ts.Ticks < 0;
             var delta = Math.Abs(ts.TotalSeconds);
 
-            const int SECOND = 1;
-            const int MINUTE = 60 * SECOND;
-            const int HOUR = 60 * MINUTE;
-            const int DAY = 24 * HOUR;
-            const int MONTH = 30 * DAY;
+            // These values are approximate and used to calculate a friendly
+            // approximation of a date time in the past or future.
+            const int second = 1;
+            const int minute = 60 * second;
+            const int hour = 60 * minute;
+            const int day = 24 * hour;
+            const int month = 30 * day; 
 
-
-            if (delta <= 5 * SECOND)
+            if (delta <= 5 * second)
             {
                 return "just now";
             }
-            if (delta < 1 * MINUTE)
+            if (delta < 1 * minute)
             {
                 var message = future ? "in {0} seconds" : "{0} seconds ago";
                 return string.Format(message, Math.Abs(ts.Seconds));
             }
-            if (delta < 2 * MINUTE)
+            if (delta < 2 * minute)
             {
                 return future ? "in a minute" : "a minute ago";
             }
-            if (delta < 45 * MINUTE)
+            if (delta < 45 * minute)
             {
                 var message = future ? "in {0} minutes" : "{0} minutes ago";
                 return string.Format(message, Math.Abs(ts.Minutes));
             }
-            if (delta < 90 * MINUTE)
+            if (delta < 90 * minute)
             {
-                return "an hour ago";
+                return future ? "in an hour" : "an hour ago";
             }
-            if (delta < 24 * HOUR)
+            if (delta < 24 * hour)
             {
-                return ts.Hours + " hours ago";
+                var message = future ? "in {0} hours" : "{0} hours ago";
+                return string.Format(message, Math.Abs(ts.Hours));
             }
-            if (delta < 48 * HOUR)
+            if (delta < 30 * day)
             {
-                return "yesterday";
+                var message = future ? "in {0} days" : "{0} days ago";
+                return string.Format(message, Math.Abs(ts.Days));
             }
-            if (delta < 30 * DAY)
-            {
-                return ts.Days + " days ago";
-            }
-            if (delta < 12 * MONTH)
+            if (delta < 12 * month)
             {
                 var months = Convert.ToInt32(Math.Floor((double)ts.Days / 30));
-                return months <= 1 ? "one month ago" : months + " months ago";
+                if(months<=1)
+                {
+                    return future ? "in 1 month" : "1 month ago";
+                }
+                var message = future ? "in {0} months" : "{0} months ago";
+                return string.Format(message, months);
             }
             else
             {
                 var years = Convert.ToInt32(Math.Floor((double)ts.Days / 365));
-                return years <= 1 ? "one year ago" : years + " years ago";
+                if(years<=1)
+                {
+                    return future ? "in 1 year" : "1 year ago";
+                }
+                var message = future ? "in {0} years" : "{0} years ago";
+                return string.Format(message, years);
             }
-            
-            
         }
     }
 }

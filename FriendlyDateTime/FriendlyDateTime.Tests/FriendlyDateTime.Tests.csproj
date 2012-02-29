@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicTests.cs" />
+    <Compile Include="SystemTimeTests.cs" />
     <Compile Include="DateTimeKindTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
