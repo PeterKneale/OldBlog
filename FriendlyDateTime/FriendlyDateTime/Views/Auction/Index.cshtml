@@ -1,0 +1,45 @@
+﻿@model IEnumerable<AuctionViewModel>
+@{
+    ViewBag.Title = "Auctions";
+}
+
+<h2>Auctions as at @DateTime.Now</h2>
+
+
+<table width="100%">
+
+    <thead>
+        <tr>
+            <th>
+                Created At
+            </th>
+                
+            <th>
+                Started At
+            </th>
+                
+            <th>
+                Ended At
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var auction in Model)
+        {
+            <tr>
+                <td>
+                    @auction.CreatedAt (@auction.FriendlyCreatedAt)
+                </td>
+                
+                <td>
+                    @auction.StartedAt (@auction.FriendlyStartedAt)
+                </td>
+                
+                <td>
+                    @auction.EndedAt (@auction.FriendlyEndedAt)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+    
