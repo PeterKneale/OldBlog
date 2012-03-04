@@ -23,14 +23,16 @@ namespace Demo.Models
         public static void Start()
         {
             Mapper.CreateMap<Vehicle, VehicleViewModel>()
-                .ForMember(dst => dst.MaximumSpeed, opt => opt.MapFrom(src => FormatSpeed(src.MaximumSpeed)))
+                .ForMember( dst => dst.MaximumSpeed, 
+                            opt => opt.MapFrom(src => FormatSpeed(src.MaximumSpeed)))
                 .Include<Car, CarViewModel>()
                 .Include<Truck, TruckViewModel>();
 
             Mapper.CreateMap<Car, CarViewModel>();
             
             Mapper.CreateMap<Truck, TruckViewModel>()
-                .ForMember(dst => dst.MaximumLoad, opt => opt.MapFrom(src => FormatLoad(src.MaximumLoad)));
+                .ForMember( dst => dst.MaximumLoad, 
+                            opt => opt.MapFrom(src => FormatLoad(src.MaximumLoad)));
         }
 
         public static string FormatSpeed(int speed)

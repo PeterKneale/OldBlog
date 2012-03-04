@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Domain.cs" />
+    <Compile Include="Code\Repository.cs" />
     <Compile Include="Code\Services.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
