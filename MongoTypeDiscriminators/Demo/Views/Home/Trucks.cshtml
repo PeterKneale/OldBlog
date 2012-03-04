@@ -1,0 +1,10 @@
+﻿@model IEnumerable<TruckViewModel>
+<h1>Trucks</h1>
+<ul>
+    @foreach (var truck in Model)
+    {
+    <li>
+        @Html.DisplayFor(x => truck)   
+    </li>
+    }
+</ul>

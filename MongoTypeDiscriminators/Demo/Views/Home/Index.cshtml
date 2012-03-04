@@ -1,0 +1,12 @@
+﻿@model IEnumerable<VehicleViewModel>
+<h1>All Vehicles</h1>
+<ul>
+    @foreach (var vehicle in Model)
+    {
+    <li>
+        @Html.DisplayFor(x => vehicle)   
+    </li>
+    }
+</ul>
+
+

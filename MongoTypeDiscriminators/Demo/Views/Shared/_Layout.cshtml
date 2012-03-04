@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>Mongo Type Discriminators</h1>
+            </div>
+            <br />
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Cars", "Cars", "Home")</li>
+                    <li>@Html.ActionLink("Trucks", "Trucks", "Home")</li>
+                    <li>@Html.ActionLink("Create Car", "CreateCar", "Home")</li>
+                    <li>@Html.ActionLink("Create Truck", "CreateTruck", "Home")</li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+</body>
+</html>
