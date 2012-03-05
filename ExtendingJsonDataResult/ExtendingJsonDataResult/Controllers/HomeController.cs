@@ -18,6 +18,7 @@ namespace ExtendingJsonResult.Controllers
         {
             return View();
         }
+
         public JsonResult SingleResultDemo()
         {
             // Load Data
@@ -31,7 +32,8 @@ namespace ExtendingJsonResult.Controllers
             var json = new {Total = total, Time = DateTime.Now.ToString("h:mm:ss:fff")};
             
             // Return Json and Html in one request!
-            return JsonData(json, allowGet:true).WithHtml("_CarList", model);
+            return JsonAndSingleHtml(json)
+                .WithHtml("_CarList", model);
         }
 
         public JsonResult MultiResultDemo()
@@ -49,7 +51,7 @@ namespace ExtendingJsonResult.Controllers
             var json = new { Total = total, Time = DateTime.Now.ToString("h:mm:ss:fff") };
 
             // Return Json and Multiple Html Partials in one request!
-            return MultiJsonData(json, allowGet: true)
+            return JsonAndMultiHtml(json)
                 .WithHtml("All", "_CarList", model1)
                 .WithHtml("Random", "_CarList", model2);
         }

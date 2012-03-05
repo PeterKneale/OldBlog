@@ -6,7 +6,7 @@ namespace ExtendingJsonResult.Controllers
     public class BaseController : Controller
     {
         // This simplifies the creation of the json data result class
-        protected internal virtual JsonAndSingleHtmlResult JsonData(object json = null, bool allowGet = false)
+        protected internal virtual JsonAndSingleHtmlResult JsonAndSingleHtml(object json = null, bool allowGet = true)
         {
             return new JsonAndSingleHtmlResult(json)
             {
@@ -15,7 +15,7 @@ namespace ExtendingJsonResult.Controllers
         }
 
         // This simplifies the creation of the json data result class
-        protected internal virtual JsonAndMultiHtmlResult MultiJsonData(object json = null, bool allowGet = false)
+        protected internal virtual JsonAndMultiHtmlResult JsonAndMultiHtml(object json = null, bool allowGet = true)
         {
             return new JsonAndMultiHtmlResult(json)
             {
