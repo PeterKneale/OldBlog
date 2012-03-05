@@ -53,7 +53,7 @@ namespace ExtendingJsonResult.Controllers
             // Return Json and Multiple Html Partials in one request!
             return JsonAndMultiHtml(json)
                 .WithHtml("All", "_CarList", model1)
-                .WithHtml("Random", "_CarList", model2);
+                .WithHtml("Random", "_FancyCarList", model2);
         }
     }
 }
