@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExtendingJsonDataResult</RootNamespace>
-    <AssemblyName>ExtendingJsonDataResult</AssemblyName>
+    <RootNamespace>ExtendingJsonResult</RootNamespace>
+    <AssemblyName>ExtendingJsonResult</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
@@ -69,10 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Car.cs" />
-    <Compile Include="Code\JsonDataResultBase.cs" />
-    <Compile Include="Code\MultiJsonDataResult.cs" />
+    <Compile Include="Code\JsonAndHtmlResult.cs" />
+    <Compile Include="Code\JsonAndMultiHtmlResult.cs" />
     <Compile Include="Code\Database.cs" />
-    <Compile Include="Code\SingleJsonDataResult.cs" />
+    <Compile Include="Code\JsonAndSingleHtmlResult.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">

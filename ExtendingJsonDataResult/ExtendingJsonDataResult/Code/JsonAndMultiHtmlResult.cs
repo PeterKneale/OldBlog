@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace ExtendingJsonDataResult.Code
+namespace ExtendingJsonResult.Code
 {
     struct HtmlPartial
     {
@@ -9,9 +9,9 @@ namespace ExtendingJsonDataResult.Code
         public object Model;
     }
 
-    public class MultiJsonDataResult : JsonDataResultBase
+    public class JsonAndMultiHtmlResult : JsonAndHtmlResult
     {
-        public MultiJsonDataResult(object json)
+        public JsonAndMultiHtmlResult(object json)
         {
             _json = json;
             _partials = new Dictionary<string, HtmlPartial>();
@@ -22,7 +22,7 @@ namespace ExtendingJsonDataResult.Code
         private readonly IDictionary<string, HtmlPartial> _partials;
         private readonly IDictionary<string, string> _results;
 
-        public MultiJsonDataResult WithHtml(string key, string partialViewName = null, object model = null)
+        public JsonAndMultiHtmlResult WithHtml(string key, string partialViewName = null, object model = null)
         {
             _partials.Add(key, new HtmlPartial { Name = partialViewName, Model = model });
             return this;

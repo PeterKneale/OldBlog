@@ -1,23 +1,23 @@
 ﻿using System.Web.Mvc;
-using ExtendingJsonDataResult.Code;
+using ExtendingJsonResult.Code;
 
-namespace ExtendingJsonDataResult.Controllers
+namespace ExtendingJsonResult.Controllers
 {
     public class BaseController : Controller
     {
         // This simplifies the creation of the json data result class
-        protected internal virtual SingleJsonDataResult JsonData(object json = null, bool allowGet = false)
+        protected internal virtual JsonAndSingleHtmlResult JsonData(object json = null, bool allowGet = false)
         {
-            return new SingleJsonDataResult(json)
+            return new JsonAndSingleHtmlResult(json)
             {
                 JsonRequestBehavior = allowGet ? JsonRequestBehavior.AllowGet : JsonRequestBehavior.DenyGet
             };
         }
 
         // This simplifies the creation of the json data result class
-        protected internal virtual MultiJsonDataResult MultiJsonData(object json = null, bool allowGet = false)
+        protected internal virtual JsonAndMultiHtmlResult MultiJsonData(object json = null, bool allowGet = false)
         {
-            return new MultiJsonDataResult(json)
+            return new JsonAndMultiHtmlResult(json)
             {
                 JsonRequestBehavior = allowGet ? JsonRequestBehavior.AllowGet : JsonRequestBehavior.DenyGet
             };

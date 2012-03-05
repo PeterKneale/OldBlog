@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using ExtendingJsonDataResult.Code;
-using ExtendingJsonDataResult.Models;
+using ExtendingJsonResult.Code;
+using ExtendingJsonResult.Models;
 
-namespace ExtendingJsonDataResult.Controllers
+namespace ExtendingJsonResult.Controllers
 {
     public class HomeController : BaseController
     {

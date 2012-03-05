@@ -1,10 +1,10 @@
 ﻿using System.Web.Mvc;
 
-namespace ExtendingJsonDataResult.Code
+namespace ExtendingJsonResult.Code
 {
-    public class SingleJsonDataResult : JsonDataResultBase
+    public class JsonAndSingleHtmlResult : JsonAndHtmlResult
     {
-        public SingleJsonDataResult(object json)
+        public JsonAndSingleHtmlResult(object json)
         {
             _json = json;
         }
@@ -15,7 +15,7 @@ namespace ExtendingJsonDataResult.Code
         private string _partialViewName;
         private object _partialViewModel;
 
-        public SingleJsonDataResult WithHtml(string partialViewName = null, object model = null)
+        public JsonAndSingleHtmlResult WithHtml(string partialViewName = null, object model = null)
         {
             // Store the names of the partials for later use
             _partialViewName = partialViewName;

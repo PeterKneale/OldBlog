@@ -3,9 +3,9 @@ using System.Text;
 using System.Web.Mvc;
 using System.Web.UI;
 
-namespace ExtendingJsonDataResult.Code
+namespace ExtendingJsonResult.Code
 {
-    public class JsonDataResultBase : JsonResult
+    public abstract class JsonAndHtmlResult : JsonResult
     {
         protected string RenderPartialAsString(ControllerContext context, string viewName, object model)
         {

@@ -1,6 +1,6 @@
-﻿using ExtendingJsonDataResult.Code;
+﻿using ExtendingJsonResult.Code;
 
-namespace ExtendingJsonDataResult.Models
+namespace ExtendingJsonResult.Models
 {
     public class CarViewModel
     {

@@ -1,4 +1,4 @@
-﻿namespace ExtendingJsonDataResult.Code
+﻿namespace ExtendingJsonResult.Code
 {
     public class Car
     {

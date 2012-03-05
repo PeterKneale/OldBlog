@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ExtendingJsonDataResult.Code
+namespace ExtendingJsonResult.Code
 {
     public class Database
     {

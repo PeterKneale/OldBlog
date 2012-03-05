@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{45ACC5
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendingJsonDataResult", "ExtendingJsonDataResult\ExtendingJsonDataResult.csproj", "{8210A238-397C-4D22-A28D-A05FE52A2590}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendingJsonResult", "ExtendingJsonDataResult\ExtendingJsonResult.csproj", "{8210A238-397C-4D22-A28D-A05FE52A2590}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
