@@ -1,0 +1,10 @@
+﻿@model IEnumerable<CarViewModel>
+
+<ul>
+    @foreach (var car in Model)
+    {
+        <li>
+            @car.Description
+        </li>
+    }
+</ul>
