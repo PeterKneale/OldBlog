@@ -17,15 +17,15 @@ namespace ExtendingJsonResult.Controllers
         public JsonResult Demo()
         {
             // Load Data
-            var allCars = Core.ListAll();
-            var randomCars = Core.RandomTwo();
-            var total = allCars.Count() + randomCars.Count();
+            var allProducts = Core.ListAll();
+            var randomProducts = Core.RandomTwo();
+            var total = allProducts.Count() + randomProducts.Count();
 
-            // Create Model Object
-            var model1 = AutoMapper.Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(allCars);
-            var model2 = AutoMapper.Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(randomCars);
+            // Create Model Objects
+            var model1 = AutoMapper.Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(allProducts);
+            var model2 = AutoMapper.Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(randomProducts);
 
-            // Create the json Data object
+            // Create the json  object
             var json = new { Total = total, Time = DateTime.Now.ToString("h:mm:ss:fff") };
 
             // Return Json and Multiple Html Partials in one request!
