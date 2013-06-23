@@ -1,0 +1,9 @@
+﻿@model IEnumerable<ProductViewModel>
+<table style="border:solid green">
+    <tr>
+        @foreach (var item in Model)
+        {
+            <td>@item.Description</td>
+        }
+    </tr>
+</table>

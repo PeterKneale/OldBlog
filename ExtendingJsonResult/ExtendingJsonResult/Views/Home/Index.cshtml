@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script>
+
+    function GetData(url, onSuccess) {
+        // Makes a generic ajax GET request to an action that returns the new JsonDataResult
+        $.ajax({
+            type: "GET",
+            cache: false, // this needed to stop IE caching the GET requests
+            url: url,
+            dataType: "json",
+            success: function (data, textStatus, jqxhr) {
+                // Call the onSoccess method method, passing the returned HtmlData and JsonData
+                onSuccess(data.Html, data.Json);
+            },
+            error: function (data, text, error) {
+                alert("Error: " + error);
+            }
+        });
+    }
+    function PerformDemo() {
+        var url = "@Url.Action("Demo")";
+        GetData(url, UpdateUi);
+        return false;
+    }
+    
+
+    function UpdateUi(html, json) {
+        // Update the UI with the data returned
+        $("#target1").html(html[0]);
+        $("#target2").html(html[1]);
+        $("#target3").html(html[2]);
+        $("#target4").html(json.Total);
+        $("#target5").html(json.Time);
+    }
+
+</script>
+
+<input type="button" onclick="PerformDemo();" value="Run demo"/>
+
+<p>
+    <strong>Html[0]:</strong> <div id="target1"></div>
+</p>
+<p>
+    <strong>Html[1]:</strong> <div id="target2"></div>
+</p>
+<p>
+    <strong>Html[2]:</strong> <div id="target3"></div>
+</p>
+<p>
+    <strong>Json.Total:</strong> <div id="target4"></div>
+</p>
+<p>
+    <strong>Json.Time:</strong> <div id="target5"></div>
+</p>

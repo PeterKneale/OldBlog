@@ -46,8 +46,8 @@ function UpdateSingleDemoUi(htmlData, jsonData) {
 
 function UpdateMultiDemoUi(htmlData, jsonData) {
     // Update the UI with the data returned
-    config.cars.html(htmlData[0]); // Note that the htmlData.key syntax is used.
-    config.randomCars.html(htmlData[1]);
+    config.cars.html(htmlData.All); // Note that the htmlData.key syntax is used.
+    config.randomCars.html(htmlData.Random);
     config.total.text(jsonData.Total);
     config.time.text(jsonData.Time);
 }

@@ -1,0 +1,4 @@
+﻿@model IEnumerable<ProductViewModel>
+<div style="border:solid red">
+    @string.Join(",", Model.Select(x=>x.Description))
+</div>

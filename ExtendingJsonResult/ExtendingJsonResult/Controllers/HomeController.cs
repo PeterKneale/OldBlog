@@ -9,51 +9,30 @@ namespace ExtendingJsonResult.Controllers
 {
     public class HomeController : BaseController
     {
-        public ActionResult SingleDemo()
+        public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult MultiDemo()
-        {
-            return View();
-        }
-
-        public JsonResult SingleResultDemo()
+        public JsonResult Demo()
         {
             // Load Data
-            var cars = Database.ListAllCars();
-            var total = cars.Count();
-
-            // Create Model Object
-            var model = AutoMapper.Mapper.Map<IEnumerable<Car>, IEnumerable<CarViewModel>>(cars);
-
-            // Create the json Data object
-            var json = new {Total = total, Time = DateTime.Now.ToString("h:mm:ss:fff")};
-            
-            // Return Json and Html in one request!
-            return JsonAndSingleHtml(json)
-                .WithHtml("_CarList", model);
-        }
-
-        public JsonResult MultiResultDemo()
-        {
-            // Load Data
-            var allCars = Database.ListAllCars();
-            var randomCars = Database.ListRandomCars();
+            var allCars = Core.ListAll();
+            var randomCars = Core.RandomTwo();
             var total = allCars.Count() + randomCars.Count();
 
             // Create Model Object
-            var model1 = AutoMapper.Mapper.Map<IEnumerable<Car>, IEnumerable<CarViewModel>>(allCars);
-            var model2 = AutoMapper.Mapper.Map<IEnumerable<Car>, IEnumerable<CarViewModel>>(randomCars);
+            var model1 = AutoMapper.Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(allCars);
+            var model2 = AutoMapper.Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(randomCars);
 
             // Create the json Data object
             var json = new { Total = total, Time = DateTime.Now.ToString("h:mm:ss:fff") };
 
             // Return Json and Multiple Html Partials in one request!
-            return JsonAndMultiHtml(json)
-                .WithHtml("All", "_CarList", model1)
-                .WithHtml("Random", "_FancyCarList", model2);
+            return CustomJson(json)
+                .WithHtml("_ListHorizontal", model1)
+                .WithHtml("_ListVertical", model1)
+                .WithHtml("_ListCommaSeperated", model2);
         }
     }
 }
