@@ -1,0 +1,10 @@
+﻿@model AlbumModel
+
+<img src="@Model.FirstImage.Link" title="@Model.FirstImage.Title" alt="@Model.FirstImage.Title @Model.FirstImage.Description"/>
+
+@foreach (var image in Model.Images)
+{
+    <a href="@Url.Action("View","Image",new{image.Id})">
+        <img src="@image.Thumbnail" title="@image.Title" alt="@image.Title @image.Description"/>
+    </a>
+}

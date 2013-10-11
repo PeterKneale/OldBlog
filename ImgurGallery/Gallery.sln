@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Core", "Gallery.Core\Gallery.Core.csproj", "{92EFF3A1-F2D3-443D-BC97-219E630B0319}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A6FAEC87-E258-4EA7-A2EC-79C657CECEEA}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Web", "Gallery.Web\Gallery.Web.csproj", "{FC9B028E-F4EF-4FA6-AF05-2FF1730DCFE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92EFF3A1-F2D3-443D-BC97-219E630B0319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92EFF3A1-F2D3-443D-BC97-219E630B0319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92EFF3A1-F2D3-443D-BC97-219E630B0319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92EFF3A1-F2D3-443D-BC97-219E630B0319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC9B028E-F4EF-4FA6-AF05-2FF1730DCFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC9B028E-F4EF-4FA6-AF05-2FF1730DCFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC9B028E-F4EF-4FA6-AF05-2FF1730DCFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC9B028E-F4EF-4FA6-AF05-2FF1730DCFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

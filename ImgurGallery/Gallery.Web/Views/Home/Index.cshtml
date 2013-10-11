@@ -1,0 +1,20 @@
+﻿@model IEnumerable<BaseGalleryModel>
+
+@foreach (var gallery in Model)
+{
+    if (gallery is GalleryImageModel)
+    {
+        var image = gallery as GalleryImageModel;
+        <a href="@Url.Action("View","Image",new{id=image.Id})">
+            <img src="@image.Thumbnail" title="@image.Title" alt="@image.Title @image.Description"/>
+        </a>
+    }
+    if (gallery is GalleryAlbumModel)
+    {
+        var album = gallery as GalleryAlbumModel;
+        <a href="@Url.Action("View","Album",new{id=album.Id})">
+            <img src="@album.Thumbnail" title="@album.Title" alt="@album.Title @album.Description"/>
+        </a>
+    }
+
+}
