@@ -205,6 +205,7 @@
     <Content Include="Views\Image\View.cshtml" />
     <Content Include="Views\Album\View.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Navigation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
