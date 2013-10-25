@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneMvc.Web", "BackboneMvc.Web\BackboneMvc.Web.csproj", "{3857E924-2054-4C2B-87A1-1B23E6EA26FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneMvc.Data", "BackboneMvc.Data\BackboneMvc.Data.csproj", "{2C8EBA5F-03B2-4F73-950F-76411642126A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{385C2A31-87FC-4E19-8322-6ED8F4191F1D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3857E924-2054-4C2B-87A1-1B23E6EA26FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3857E924-2054-4C2B-87A1-1B23E6EA26FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3857E924-2054-4C2B-87A1-1B23E6EA26FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3857E924-2054-4C2B-87A1-1B23E6EA26FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8EBA5F-03B2-4F73-950F-76411642126A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8EBA5F-03B2-4F73-950F-76411642126A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8EBA5F-03B2-4F73-950F-76411642126A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8EBA5F-03B2-4F73-950F-76411642126A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
